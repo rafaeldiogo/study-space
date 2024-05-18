@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <!-- Título da Página -->
+    <head>
+        <title>My first web page</title>
+    </head>
+  <body>
+    <!-- Parágrafos -->
+    <h2>-----------------Parágrafos -------------------------</h2>
+    <p>This my first web page</p>
+    <p>How exciting</p>
+
+    <!-- Ênfase (negrito e itálico) -->
+    <h2>-----------------Ênfases------------------------------</h2>
+    <p>Yes, that really <em>is</em> exciting. <strong>Warning:</strong> lvel of excitement may cause head to explode.</p>
+  
+    <!-- Quebrar Linha -->
+    <h2>----------------Quebrar linhas-----------------------</h2>
+    This is my first web page <br>
+    How exciting
+
+    <!-- Heading - Importâncias dos títulos -->
+    <h2>----------------Títulos------------------------------</h2>
+    <h1>My first web page</h1> <!-- Somente um por página -->
+    
+    <h2>What is is</h2>
+    <p>A simple page put together using HTML</p>
+
+    <h2>Why this is</h2>
+    <p>To learn HTML</p>
+
+    <!-- Listas Ordenadas e Não Ordenadas -->
+    <h2>---------------Listas--------------------------------</h2>
+    <!-- Lista Não Ordenada (ul - unordered list) -->
+    <ul>
+        <li>To learn HTML</li>
+        <li>To show off
+            <!-- Lista Ordenada (ol - ordered list) -->
+            <ol>
+                <li>To my boss</li>
+                <li>To my friends</li>
+                <li>To my cat</li>
+                <li>To the little talking duck in my brain</li>
+            </ol>
+        </li>
+        <li>Becasuse I've fallen in love with computer and want to give her some HTML loving.</li>
+    </ul>
+
+    <!-- Links - Utilizando ancoras (a) para navegar entre páginas -->
+    <h2>--------------Links-----------------------------------</h2>
+    <h2>Where to find the tutorial</h2>
+    <p><a href="http://www.htmldog.com">HTML Dog</a></p>
+    <!-- Utilizando o atributo id para navegar entre os conteudos da mesma página -->
+    <h2 id="moss">Moss</h2>
+    <a href="#moss">Go to moss</a> <!-- Ao clicar aqui, será feito um scroll até o conteúdo moss -->
+
+    <!-- Imagens -->
+    <h2>-------------Imagens----------------------------------</h2>
+    <div>
+        <img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog" width="120" height="90">
+        <img src="../../curso-rapido-battisti/img/download.png" alt="Solana Crypto">
+    </div>
+
+    <!-- Tabelas -->
+    <h2>-------------Tabela-----------------------------------</h2>
+    <table> <!-- Incia a estrutura da tabela -->
+        <tr> <!-- table row - linha da tabela -->
+            <td>Linha 1, célula 1</td> <!-- table data - conteúdo da tabela -->
+            <td>Linha 1, célula 2</td>
+            <td>Linha 1, célula 3</td>
+        </tr>
+        <tr>
+            <td>Linha 2, célula 1</td>
+            <td>Linha 2, célula 2</td>
+            <td>Linha 2, célula 3</td>
+        </tr>
+        <tr>
+            <td>Linha 3, célula 1</td>
+            <td>Linha 3, célula 2</td>
+            <td>Linha 3, célula 3</td>
+        </tr>
+        <tr>
+            <td>Linha 4, célula 1</td>
+            <td>Linha 4, célula 2</td>
+            <td>Linha 4, célula 3</td>
+        </tr>
+    </table>
+
+    <!-- Formulário -->
+    <h2>------------Formulário-----------------------------</h2>
+    <!-- action - indica ao formulário para onde o conteúdo será enviado -->
+    <!-- method - indica ao formulário como o conteúdo será utilizado (GET e POST são os mais utilizados) -->
+    <form action="processinscript.php" method="post">
+        <!-- Type = "text" - Formulário permite somente texto -->
+        <h2>Typy text</h2>
+        <input type="text" value="text">
+
+        <!-- Type = "password" - Similar com o anterior mas o que for digitado será ocultado -->
+        <h2>Type password</h2>
+        <input type="password">
+
+        <!-- Type = "checkbox" - checkbox para ser marcado -->
+        <!-- O atributo checked pode ser habilitado como padrao quando se quer o checkbox marcado no início -->
+        <!-- Não é necessário utilizar o atributo value -->
+        <h2>Type checkbox</h2>
+        <input type="checkbox" checked>
+
+        <!-- Type = "radio" - similar ao checkbox mas só pode ser selecionado apenas um radio em um grupo de varios radios -->
+        <!-- O atributo checked tambem pode ser utilizado -->
+        <h2>Type radio</h2>
+        <input type="radio">
+
+        <!-- Type = "submit" - É um botão que ao ser selecionado irá enviar o formulário -->
+        <!-- O atributo value permite exibir um texto no input -->
+        <h2>Type submit</h2>
+        <input type="submit" value="submit">
+
+        <!-- Textarea - é basicamente uma caixa multi texto que pode ser definido linhas e colunas através dos atributos cols e rows -->
+        <!-- Para exibir um texto como se fosse um value, é só inserir conteúdo dentro da tag -->
+        <h2>Textarea</h2>
+        <textarea cols="30" rows="10">A big load of text</textarea>
+    
+        <!-- Select - é utilizado junto com a tag option para se criar um drop-down select boxes -->
+        <!-- Quando o formulário é enviado com a opção do option selecionada, se a tag option não tiver o atributo value, o que será enviado é o conteudo dentro da tag (option), porém se na tag tiver o atributo value, o conteudo do value que será enviado -->
+        <!-- Tem a possibilidade de utilizar o atributo selected para deixar selecionado a opção como padrão -->
+        <h2>Select</h2>
+        <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option value="third option">Option 3</option>
+        </select>
+    </form>
+
+    <!-- Names - Caso não utilize o atributo name, o formulário não vai funcionar. Assim como se não tiver o arquivo informado no atributo action -->
+    <h2>Names</h2>
+    <form action="contactus.php" method="post">
+        <p>Name:</p>
+        <p><input type="text" name="name" value="Your name"></p>
+
+        <p>Species:</p>
+        <p><input name="species"></p>
+
+        <p>Comments:</p>
+        <p><textarea name="comments" cols="20" rows="5">Your commments</textarea></p>
+
+        <p>Are you:</p>
+        <p><input type="radio" name="areyou" value="male">Male</p>
+        <p><input type="radio" name="areyou" value="female">Female</p>
+        <p><input type="radio" name="areyou" value="hermaphrodite">An hermaphrodite</p>
+        <p><input type="radio" name="areyou" value="asexual">Asexual</p>
+
+        <p><input type="submit"></p>
+    </form>
+
+</body>
+</html>

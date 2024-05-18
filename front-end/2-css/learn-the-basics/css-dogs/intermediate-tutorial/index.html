@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Intermediate</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Tutorial Intermediate</h1>
+
+    <!-- Id é utilizado para identificar apenas um elemento -->
+    <!-- Class é utilizado para identificar mais de um elemento -->
+    <h2>---------------Class e ID Selectors--------------</h2>
+    <div id="top">
+      <h3>Chocolate curry</h3>
+      <p class="intro">
+        This is my recipe for making curry purely with chocolate
+      </p>
+      <p class="intro">Mmm mm mmmmm</p>
+    </div>
+
+    <h2>----------------Grouping e Nesting-----------------</h2>
+
+    <!-- É utilizado para dar as mesmas propriedades a vários seletores sem precisar repeti-las -->
+    <h3>Grouping</h3>
+    <p class="example-principal">Exemplo de grouping parte 1</p>
+    <p class="example-other-class">Exemplo de grouping parte 2</p>
+    <p class="example-another-class">Exemplo de grouping parte 3</p>
+
+    <!-- Utilizado para especificar as propriedades sem precisar criar classe ou id. Através da estrutura html é possível inserir propriedades -->
+    <h3>Nesting</h3>
+    <div id="top">
+      <h1>Chocolate curry</h1>
+      <p>This is my recipe for making curry purely with chocolate</p>
+      <p>Mmm mm mmmmm</p>
+    </div>
+
+    <!-- tem o padrão selector:pseudo_class {property: value;} -->
+    <h2>-------------Pseudo Classes--------------</h2>
+    <!-- Utilizado para indicar se o link foi visitado ou não. -->
+    <h3>Links</h3>
+    <a href="https://www.google.com" class="example-pseudo-class"
+      >Clique aqui</a
+    >
+    <!-- Utilizado para dar estilização quando um elemento sofre alguma variaçãi -->
+    <!-- active - ativado quando o elemento é clicado -->
+    <!-- hover - ativado quando o mouse passa sobre o elemento -->
+    <!-- focus - utilizado para dar foco ao elemento -->
+    <h3>Dynamic Pseudo Classes</h3>
+    <a href="#" class="example-dynamic-pseudoclass">Clique aqui de novo</a>
+
+    <!-- Utilizado para adicionar propriedades ao primeiro elemento da hierarquia do bloco escolhido -->
+    <h3>First Children</h3>
+    <div class="example-first-children">
+      <p>I’m the body’s first paragraph child. I rule. Obey me.</p>
+      <p>I resent you.</p>
+    </div>
+
+    <h2>---------Shorthand Properties----------</h2>
+    <h3>Margins e Padding</h3>
+    <p class="example-shorthand-margin">
+      Exemplo de atalho para Margin que também pode ser usado para o padding
+    </p>
+
+    <h3>Borders</h3>
+    <p class="example-shorthand-border">Exemplo de atalho para border</p>
+
+    <h3>Font</h3>
+    <p class="example-shorthand-font">Exemplo de atalho para font</p>
+
+    <!-- Utilizado de forma diferente da tag img do HTML. É uma propriedade poderosa para adicionar detalhes para uma pagina -->
+    <h2>----------Background Images---------</h2>
+    <img src="#" alt="dadsads" class="example-background-image" />
+
+    <!-- Utilizado para evitar conflitos de propriedades -->
+    <h2>---------Specificity (Especificidade)---------</h2>
+    <ul style="margin: 20px">
+      <li>p has a specificity of 1 (1 HTML selector)</li>
+      <li>div p has a specificity of 2 (2 HTML selectors, 1+1)</li>
+      <li>.tree has a specificity of 10 (1 class selector)</li>
+      <li>
+        div p.tree has a specificity of 12 (2 HTML selectors + a class selector,
+        1+1+10)
+      </li>
+      <li>#baobab has a specificity of 100 (1 id selector)</li>
+      <li>
+        body #content .alternative p has a specificity of 112 (HTML selector +
+        id selector + class selector + HTML selector, 1+100+10+1)
+      </li>
+    </ul>
+
+    <h2>--------------Display---------</h2>
+    <h3>Inline</h3>
+    <ul class="example-display-inline">
+      <li>This</li>
+      <li>and</li>
+      <li>that</li>
+    </ul>
+
+    <h3>Block</h3>
+    <ul class="example-display-block">
+      <li>This</li>
+      <li>and</li>
+      <li>that</li>
+    </ul>
+
+    <!-- tem o padrão selector::pseudo_element {property: value;} -->
+    <h2>------------Pseudo Elements-------------</h2>
+    <!-- Utilizado para aplicar CSS na primeira letra e na primeira linha, respectivamente -->
+    <h3>First Letters e First Lines</h3>
+    <p class="example-pseudoelement-firstletter-firstline">
+      Ocen upon a time in a blueberry bubblegum land covered in pink violets
+      that swayed to the rhythm of "My Baby Just Cares for Me" there lived a
+      podgy yet attractive raspberry fairy called bedooda.
+    </p>
+
+    <h3>Before a After Content</h3>
+    <blockquote class="blockquote">
+      <ul class="ul">
+        <li><p>gfdgfdgfd</p></li>
+      </ul>
+    </blockquote>
+
+    <h2>------------Page Layout--------</h2>
+    <!-- Utilizado para definir o nox como absolute, relative, static or fixed -->
+    <!-- Fluxo do HTML - a posição dos elementos, seguindo a ordem das tags -->
+    <!-- static - posição padrão dos elementos -->
+    <!-- relative - posição que podemos modificar as direções -->
+    <!-- absolute - pode se referenciar pela tela ou por algum elemento -->
+    <!-- fixed - posição que fixa o elemento na tela -->
+    <!-- sticky - mistura de fixed com relative -->
+    <h3>Positioning</h3>
+    <h4>Usando position absolute</h4>
+    <div id="navigation">
+      <ul>
+        <li><a href="this.html">This</a></li>
+        <li><a href="that.html">That</a></li>
+        <li><a href="theOther.html">The Other</a></li>
+      </ul>
+    </div>
+
+    <div id="content">
+      <h1>Ra ra banjo banjo</h1>
+      <p>
+        Welcome to the Ra ra banjo banjo page. Ra ra banjo banjo. Ra ra banjo
+        banjo. Ra ra banjo banjo.
+      </p>
+      <p>(Ra ra banjo banjo)</p>
+    </div>
+
+    <!-- Possível utilizar float left ou right -->
+    <h4>Usando position float</h4>
+    <div id="navigation">
+      <ul>
+        <li><a href="this.html">This</a></li>
+        <li><a href="that.html">That</a></li>
+        <li><a href="theOther.html">The Other</a></li>
+      </ul>
+    </div>
+
+    <div id="navigation2">
+      <ul>
+        <li><a href="this.html">This</a></li>
+        <li><a href="that.html">That</a></li>
+        <li><a href="theOther.html">The Other</a></li>
+      </ul>
+    </div>
+
+    <div id="content">
+      <h1>Ra ra banjo banjo</h1>
+      <p>
+        Welcome to the Ra ra banjo banjo page. Ra ra banjo banjo. Ra ra banjo
+        banjo. Ra ra banjo banjo.
+      </p>
+      <p>(Ra ra banjo banjo)</p>
+    </div>
+    <!-- Caso queira que o proximo elemento nao faça parte do wrap tem que utilizar o clear -->
+    <!--
+      Existe os clear left, right e both
+    -->
+    <div id="footer">
+      <p>Footer! Hoorah!</p>
+  </div>
+  </body>
+</html>

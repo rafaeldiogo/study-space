@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head é a configuração da página -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titulo da Página</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <!-- body é onde os elementos que aparecem na tela estão -->
+  <body style="padding-bottom: 500px">
+    <!-- Tags de texto -->
+    <h1>Título 1</h1>
+    <!-- Somente um h1 por página -->
+    <p>Aqui eu posso escrever um texto maior.</p>
+    <h2>Título 2</h2>
+    <h6>Título 6</h6>
+    <p>Eu tenho um texto e <strong>isso é importante</strong>.</p>
+    <!-- Negrito -->
+    <p>Eu tenho um texto e <em>isso é importante</em>.</p>
+    <!-- Itálico -->
+
+    <!-- Tag de Imagens e Links -->
+    <img src="img/download.png" alt="Criptomoeda solana" />
+    <img
+      style="height: 225px"
+      src="https://images.pexels.com/photos/6272/wood-free-wooden-home.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      alt="Foto aleatória"
+    />
+    <p>
+      <a href="https://www.google.com"
+        >Navegar para página do google na mesma aba</a
+      >
+    </p>
+    <!-- "a" é conhecido como âncora que representa o link -->
+    <a href="https://www.google.com" target="_blank"
+      >Navegar para página do google em nova aba</a
+    >
+
+    <!-- Listas ordenadas e não ordenadas -->
+    <!-- Lista Não ordenada -->
+    <h2 id="meu-titulo">Lista de tarefas <em>não</em> ordenadas:</h2>
+    <ul>
+      <li class="item">Lavar o carro</li>
+      <li class="item">Estudar com Matheus</li>
+      <li class="item">Entrar para a Comunidade</li>
+      <li class="item">Me tornar um programador em menor tempo possível</li>
+    </ul>
+    <!-- Lista Ordenada -->
+    <h2>Lista de tarefas ordenadas:</h2>
+    <ol>
+      <li>Fazer a massa</li>
+      <li>Assar alguma coisa</li>
+      <li>Decorar o bolo</li>
+      <li>Colocar a cereja</li>
+    </ol>
+
+    <!-- Tabelas -->
+    <table>
+      <tr>
+        <!-- table row - linhas da tabela -->
+        <th>Nome</th>
+        <!-- table head - colunas da tabela -->
+        <th>Profissão</th>
+      </tr>
+      <tr>
+        <td>Matheus</td>
+        <!-- table data - conteudo da tabela que preenche as colunas -->
+        <td>Programador</td>
+      </tr>
+      <tr>
+        <td>João</td>
+        <td>Engenheiro</td>
+      </tr>
+    </table>
+
+    <!-- Formulários -->
+    <h2>Formulário</h2>
+    <form method="post" action="/processar_form.php">
+      <!-- action serve para indicar o local que as informações do formularios serão enviados -->
+      <!-- method é o método que o formulário vai fazer. Se for POST irá enviar os dados, se for GET irá receber os dados -->
+      <input
+        type="text"
+        aria-label="dsads"
+        name="nome-completo"
+        placeholder="Digite seu nome"
+      />
+      <br />
+      <textarea
+        name="comentario"
+        id="texto"
+        aria-label="texto"
+        placeholder="Digite seu comentário"
+      ></textarea>
+      <br />
+      <select name="marca-de-carros" id="Carros">
+        <option value="Ferrari">Ferrari</option>
+        <option value="BMW">BMW</option>
+        <option value="Audi">Audi</option>
+      </select>
+      <br />
+      <input type="email" name="email" aria-label="dsadsa" />
+      <br />
+      <input type="number" name="numeros" aria-label="dsadsa" />
+      <br />
+      <input type="password" name="senha" aria-label="dsadsa" />
+      <br />
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <!-- Elementos de bloco -->
+    <div>
+      <h3>Algum texto</h3>
+      <p>Algum conteúdo</p>
+    </div>
+    <header>
+      <!-- É utilizado no início da página -->
+      <h4>Minha marca</h4>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+      </nav>
+    </header>
+    <main>
+      <!-- É onde fica o conteudo principal da página -->
+      sdsadsadsadsd
+    </main>
+    <!-- Utilizado no final da página -->
+    <footer>Hora de Codar @ 2023</footer>
+  </body>
+</html>

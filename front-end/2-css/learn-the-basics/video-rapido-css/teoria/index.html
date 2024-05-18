@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teoria CSS</title>
+    <style>
+      /* CSS Internal */
+      body {
+        padding: 20px;
+      }
+      p {
+        color: green;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS External -->
+  </head>
+  <body>
+    <p style="color: red">Parágrafo CSS Inline (em linha)</p>
+    <!-- CSS Inline -->
+    <p>Parágrafo CSS Internal (interno)</p>
+    <p>Parágrafo CSS External (externo)</p>
+
+    <!-- Seletores (de selecionar) de CSS -->
+    <!-- 
+        - Temos formas além das tags de selecionar elementos;
+        - Por CLASSES (class): quando queremos afetar mais elementos com uma regra;
+        - Por ID (id): quando queremos afetar um ÚNICO elemento;
+        - class representado por ponto (.). Por exemplo: .container
+        - id representado por jogo da velha (#). Por exemplo: #menu
+        - Há uma convenção no HTML que não nos permite adicionar mais de um elemento com o mesmo id em uma página.
+     -->
+
+    <!-- Classes e Ids -->
+    <h1 id="titulo-principal">Título da Página</h1>
+    <p class="meu-paragrafo">Algum conteúdo site!</p>
+    <p class="meu-paragrafo">Algum conteúdo site 2!</p>
+    <p class="meu-paragrafo">Algum conteúdo site 3!</p>
+    <h2>Subtítulo da Página</h2>
+
+    <!-- Cores -->
+    <p class="nome-da-cor">Rosa</p>
+    <p class="hexadecimal">Hexadecimal</p>
+    <p class="rgb">RGB</p>
+
+    <!-- Fontes -->
+    <p class="serifada">Fonte Serifada</p>
+    <p class="sem-serifada">Fonte Sem Serifa</p>
+    <p class="mono-espacada">Fonte Mono espaçada</p>
+    <!-- Size e Weight -->
+    <p class="tamanho-fonte-grande">Esta fonte está grande</p>
+    <p class="tamanho-fonte-pequena">Esta fonte está pequena</p>
+    <p class="peso-fonte">Esta em negrito</p>
+    <p class="texto-italico">Esta em Itálico</p>
+
+    <!-- Box Model -->
+    <div class="box-model">
+      <p>Este é o box model</p>
+    </div>
+
+    <!-- Propriedades de Texto -->
+    <p class="alinhamento">Texto ao Centro</p>
+    <p class="transform-maiusculo">texto todo em maiúsculo</p>
+    <p class="transform-minusculo">TEXTO TODO EM MINÚSCULO</p>
+
+    <!-- Espaçamento de linhas e letras -->
+    <p class="espacamento-texto">Texto com espaçamento entre linhas e letras</p>
+
+    <!-- Links -->
+    <ul class="sem-estilo">
+      <li><a href="#" class="decoration">Meu Link 1</a></li>
+      <li><a href="https://www.google.com" class="visitado">Meu Link 2</a></li>
+      <li><a href="#" class="estilo-hover">Meu Link 3</a></li>
+    </ul>
+
+    <!-- Link em Botão (button) - Somente com CSS -->
+    <a href="#" class="btn">Clique em mim</a>
+
+    <!-- Listas -->
+    <!-- Não ordenadas -->
+    <ul>
+      <li>Lista</li>
+      <li>Com</li>
+      <li>Bullets</li>
+    </ul>
+    <ul class="sem-estilo">
+      <li>Lista</li>
+      <li>Sem</li>
+      <li>Bullets</li>
+    </ul>
+
+    <!-- Display -->
+    <div class="inline"></div>
+    <div class="inline"></div>
+    <span class="bloco"> Teste 1 </span>
+    <span class="bloco"> Teste 2 </span>
+    <div class="inline hidden"></div>
+
+    <!-- Posições (Position) -->
+    <!-- Position: fixed -->
+    <div class="elemento-fixo">Este elemento vai ficar fixo na tela</div>
+
+    <!-- Pseudo Seletor (Pseudo classe) - First Child -->
+    <div class="primeiro-elemento">
+      <p>Este terá estilo</p>
+      <p>Este não</p>
+      <p>Este não</p>
+      <p>Este não</p>
+    </div>
+
+    <!-- Pseudo Elementos -->
+    <p class="primeira-letra">Esta frase começa com uma letra diferente!</p>
+
+    <!-- Especifidade -->
+    <h2>Meu Título</h2>
+    <h2 class="titulo">Meu Título</h2>
+    <h2 class="titulo" id="meu-titulo-preferido">Meu Título</h2>
+  </body>
+</html>

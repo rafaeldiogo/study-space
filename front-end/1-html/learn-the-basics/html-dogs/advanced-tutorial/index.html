@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Intermediate HTML</title>
+  </head>
+  <body>
+    <h1>HTML Advanced</h1>
+    <h2>
+      -------Texto: Tempo, Marcação e "Presencial" (time, mark e
+      presentational)------
+    </h2>
+
+    <!-- time - Utilizado para dar semântica a data -->
+    <!-- O atributo datetime é utilizado no padrão ano-mês-dia -->
+    <h3>Tempo (time)</h3>
+    <p>
+      Written by Doctor Who on
+      <time datetime="2052-11-21">Thursday 21st November 2052</time>.
+    </p>
+
+    <!-- mark - É utilizado como se fosse uma marcação de texto (marca texto) -->
+    <h3>Marcação (mark)</h3>
+    <blockquote>
+      <p>He wants to play with his <mark>Legos</mark></p>
+    </blockquote>
+
+    <p>
+      The person being quoted is clearly American because, for some odd reason,
+      they pluralise "Lego".
+    </p>
+
+    <h3>Redefinindo "presentational" tags</h3>
+
+    <!-- hr - Utilizado para quebrar a tematica de um parágrafo -->
+    <h4>hr - horizontal rule</h4>
+    <hr />
+
+    <!-- small - Utilizado para printar de forma pequena -->
+    <h4>small - small print</h4>
+    <small>small test</small>
+
+    <h2>
+      --------------Comentários Condicionais (conditional comments)-------
+    </h2>
+    <p>
+      É relacionado a possibilitar o html ser lido nas versões anteriores do
+      internet explore, para que não quebre na tela. Olhar o conteúdo no html
+      dogs se necessário
+    </p>
+    <p>
+      Ou setar versões que o internet explore deve possuir para o html funcionar
+      sem erros
+    </p>
+
+    <h2>
+      -------------------Tabelas: Colunas, Cabeçalhos e Rodapé---------------
+    </h2>
+
+    <!-- colgroup e col - Pode ser utilizado para estilizar todo o conteudo da tabela ou alguma coluna específico -->
+    <h3>Colunas</h3>
+    <table>
+      <colgroup>
+        <col />
+        <col style="background-color: aquamarine" />
+        <col />
+      </colgroup>
+      <tr>
+        <td>This</td>
+        <td>That</td>
+        <td>The other</td>
+      </tr>
+      <tr>
+        <td>Ladybird</td>
+        <td>Locust</td>
+        <td>Lunch</td>
+      </tr>
+    </table>
+
+    <!-- É possível utilizar span jnto com o colgroup. Esse formato é normalmente utilizado e é uma boa prática -->
+    <h4>Utilizando span em colgroup</h4>
+    <table>
+      <colgroup>
+        <col />
+        <col span="2" style="background-color: aquamarine" />
+      </colgroup>
+      <tr>
+        <td>This</td>
+        <td>That</td>
+        <td>The other</td>
+      </tr>
+      <tr>
+        <td>Ladybird</td>
+        <td>Locust</td>
+        <td>Lunch</td>
+      </tr>
+    </table>
+
+    <!-- caption - Utilizado para acessibilidade da tabela e deve ser utilizado abaixo da tag table -->
+    <h3>Caption</h3>
+    <table>
+      <caption>
+        Locust mating habits
+      </caption>
+      <colgroup>
+        <col />
+        <col style="background-color: aquamarine" />
+        <col />
+      </colgroup>
+      <tr>
+        <td>This</td>
+        <td>That</td>
+        <td>The other</td>
+      </tr>
+      <tr>
+        <td>Ladybird</td>
+        <td>Locust</td>
+        <td>Lunch</td>
+      </tr>
+    </table>
+
+    <!-- thead, tbody, tfoot - É utilizado para separar o coorpo da tabela. Nesse formato é melhor para trabalhar com tabelas grandes -->
+    <!-- thead é chamado primeiro e sem seguida se chama o tfoot (porém o browser renderiza o tfoot abaixo do tbody) e por o tbody. Uma tabela pode ter vários tbody-->
+    <h3>Cabeçalho e Rodapé (thead e tfoot)</h3>
+    <table>
+      <thead>
+        <tr>
+          <td>Header 1</td>
+          <td>Header 2</td>
+          <td>Header 3</td>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td>Footer 1</td>
+          <td>Footer 2</td>
+          <td>Footer 3</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>Cell 1</td>
+          <td>Cell 2</td>
+          <td>Cell 3</td>
+        </tr>
+        <!-- etc. -->
+      </tbody>
+    </table>
+
+    <h2>----------------------Links acessíveis----------------------------</h2>
+
+    <!-- tabindex - Utilizado para ser acessado quando o TAB do teclado for acionado -->
+    <h3>Tabbing</h3>
+    <ul>
+      <li><a href="here.html" tabindex="1">Here</a></li>
+      <li><a href="there.html" tabindex="3">There</a></li>
+      <li><a href="limbo.html" tabindex="2">Limbo</a></li>
+    </ul>
+
+    <!-- Adicionar o atributo title nos links com a descrição e evitar fazer o link abrir em uma nova página ou aba -->
+    <h3>Link títulos</h3>
+    <p>
+      I'm really bad at writing link text.
+      <a
+        href="inept.html"
+        title="Why I'm rubbish at writing link text: An explanation and an apology."
+        >Click here</a
+      >
+      to find out more.
+    </p>
+
+    <!-- Utilizado para facilitar a navegação utilizando atalhos do teclado. Normalmente usa o "Alt" ou "Ctrl" + access key -->
+    <h3>Accesskeys</h3>
+    <a href="somepage.html" accesskey="s">Some page</a>
+
+    <!-- Utilizado para esquivar/pular um conteudo desnecessario na pagina -->
+    <h3>Skipping HTML</h3>
+    <header>
+      <h4>The Heading</h4>
+      <a href="#content">Skip to content</a>
+    </header>
+
+    <nav>
+      <!--loads of navigation stuff -->
+    </nav>
+
+    <section id="content">
+      <!--lovely content -->
+    </section>
+
+    <h2>
+      ------------------------Fomulários Acessíveis-----------------------
+    </h2>
+
+    <!-- Cada formulário deve possuir uma label -->
+    <!-- O atributo form deve ser utilizado para fazer associação ao conteudo do formulário -->
+    <h3>Labels</h3>
+    <form>
+      <label for="yourName">Your Name</label>
+      <input name="yourName" id="yourName" />
+    </form>
+
+    <!-- Utilizado para agrupar campos, por exemplo: name(first, last, title etc) usando a tag fieldset -->
+    <!-- Junto com a tag fieldset, se usa a tag legend para a legenda -->
+    <h3>Field sets e legends</h3>
+    <form action="somescript.php">
+      <fieldset>
+        <legend>Name</legend>
+        <p>First name <input name="firstName" /></p>
+        <p>Last name <input name="lastName" /></p>
+      </fieldset>
+      <fieldset>
+        <legend>Address</legend>
+        <p>Address <textarea name="address"></textarea></p>
+        <p>Postal code <input name="postcode" /></p>
+      </fieldset>
+    </form>
+
+    <!-- optgroup - Utilizado para agrupar as opções do select -->
+    <!-- O atributo label é utilizado para exibir um pseudo titulo não selecionável no campo das opções -->
+    <h3>Option groups</h3>
+    <select name="country">
+      <optgroup label="Africa">
+        <option value="gam">Gambia</option>
+        <option value="mad">Madagascar</option>
+        <option value="nam">Namibia</option>
+      </optgroup>
+      <optgroup label="Europe">
+        <option value="fra">France</option>
+        <option value="rus">Russia</option>
+        <option value="uk">UK</option>
+      </optgroup>
+      <optgroup label="North America">
+        <option value="can">Canada</option>
+        <option value="mex">Mexico</option>
+        <option value="usa">USA</option>
+      </optgroup>
+    </select>
+
+    <!-- Assim como os links, os campos do formulário também é preciso navegar utilizando o TAB do teclado -->
+    <!-- É utilizado os atributos accesskey e tabindex nas tags input e legend -->
+    <h3>Navegation fields</h3>
+    <input name="firstName" accesskey="f" tabindex="1" />
+
+    <h2>----------------HTML5 Formulário Parte 1: Input Types-----------</h2>
+    <h3>Additional input types</h3>
+
+    <!-- Utilizado para uma busca/pesquisa de texto-->
+    <h4>Search</h4>
+    <input type="search" name="search" />
+
+    <h4>Telephone, URL e email addresses</h4>
+    <input type="tel" name="telephone_number" />
+    <input type="url" name="web_address" />
+    <input type="email" name="email_address" />
+
+    <!-- Se o email for válido, o back-ground retorna verde. Se o email for inválido, o back-ground retorna vermelho -->
+    <h5>Utilizando pseudo classe do CSS :valid e :invalid</h5>
+    <p>
+      input[type=email]:valid { background: green } input[type=email]:invalid {
+      background: red }
+    </p>
+
+    <!-- Utilizado para permitir ao input somente inserir números e habilitar a selecao atraves das setas do teclado (para baixo ou para cima) -->
+    <!-- O atributo step é usado para definir o passo do incremento da numeracao. Por exemplo, incrementar em 2 em 2 -->
+    <!-- Os atributos min e max possibilitar definir a numeração mínima e máxima, respectivamente -->
+    <!-- Assim como no caso anterior, é possível utilizar a pseudoclasse do css para definar quais valores são válidos (:valid) ou não (:invalid) -->
+    <h4>Numbers e ranges</h4>
+    <h5>Number</h5>
+    <input type="number" name="quantity" step="2" min="20" max="30" />
+
+    <!-- Utilizado para renderizar uma barra horizontal com um slider que pode ser ajustado -->
+    <!-- Os atributos min e max definem o limite do slider -->
+    <!-- O atributo value define o valor inicial do slider -->
+    <h5>Ranger</h5>
+    <input
+      type="range"
+      name="temperature"
+      min="15"
+      max="25"
+      step="0.5"
+      value="18.5"
+    />
+
+    <!-- Define que o usuário utilize um formato padrão de datas. Possui inconsistência na utilização dos browsers -->
+    <h4>Dates e Times</h4>
+    <ul>
+      <li>type="datetime"</li>
+      <li>type="date"</li>
+      <li>type="month"</li>
+      <li>type="week"</li>
+      <li>type="time"</li>
+      <li>type="datetime-local"</li>
+    </ul>
+
+    <!-- Permite o usuário selecionar cores e enviar o código hexadecimal válido -->
+    <h4>Color</h4>
+    <input name="color" type="color" value="#ff8800" />
+
+    <h2>
+      ----------------HTML5 Formulário Parte 2: Attributes and Data
+      Lists-----------
+    </h2>
+    <h3>More attributes</h3>
+
+    <!-- Utilizado para exibir para o usuário uma mensagem padrão -->
+    <h4>Placeholder text</h4>
+    <label for="email_address">Email address</label>
+    <input
+      type="email"
+      placeholder="you@somewhere.com"
+      name="email_address"
+      id="email_address"
+    />
+
+    <!-- Utilizado para o campo se auto focar, ou seja, quando a página carregar o campo já estará focado portanto já pode ser digitado, por exemplo -->
+    <h4>Autofocus</h4>
+    <input name="query" autofocus />
+
+    <!-- Utilizado para sugerir as informações presentes no campo de texto -->
+    <h4>Data lists</h4>
+    <input name="country" list="country_name" />
+    <datalist id="country_name">
+      <option value="Afghanistan"></option>
+      <option value="Albania"></option>
+      <option value="Algeria"></option>
+      <option value="Andorra"></option>
+      <option value="Armenia"></option>
+      <option value="Australia"></option>
+      <option value="Austria"></option>
+      <option value="Azerbaijan">
+        <!-- etc. -->
+      </option>
+    </datalist>
+
+    <h2>
+      -------------------Embedded Content: Video, Audio, and
+      Canvas----------------
+    </h2>
+
+    <!-- Utilizado para exibir video -->
+    <!-- O atributo controls é opcional e permite o controle do usuário para inciar o video -->
+    <!-- Se não quiser dar esse controle para o usuário, o atributo autoplay inicia o video de forma automática -->
+    <h3>Video</h3>
+    <video src="kitties.mp4" controls></video>
+
+    <!-- É possível utilizar os atributos width e height para controlar a dimensão do video -->
+    <!-- Os atributos loop e muted são, respectivamente, para o video ficar funcionando de forma infinita e mutar o áudio -->
+    <video
+      src="kitties.mp4"
+      width="300"
+      height="200"
+      loop
+      muted
+      autoplay
+      controls
+    ></video>
+
+    <!-- Utilizado para definir uma imagem como placeholder -->
+    <h4>Poster</h4>
+    <video src="kitties.mp4" poster="fluffy.jpg" controls></video>
+
+    <!-- Utilizado para quando o video possui algum erro e quebra para o usuário -->
+    <h4>Fall-back content</h4>
+    <video src="kitties.mp4" controls>
+      <img src="hahahaha.jpg" alt="Hilarious cat and caption saying 'soz'." />
+    </video>
+
+    <!-- Utilizado para garantir a funcionalidade do video. Por exemplo, inseri o video em formatos diferentes e caso o browser não identifique um dos formatos, existe um formato backup para funcionar -->
+    <h4>Alternative content</h4>
+    <video controls>
+      <source src="kitties.mp4" type="video/mp4; codecs='avc1, mp4a'" />
+      <source src="kitties.webm" type="video/webm; codecs='vp8.0, vorbis'" />
+      <p>Browser no likey HTML 5.</p>
+    </video>
+
+    <!-- Utilizado para adicionar audio -->
+    <!-- Os atributos src, controls, autoplay e loop tem o mesmo funcionamento que o do video -->
+    <!-- Alternative content também tem o mesmo funcionamento para audios -->
+    <h3>Audio</h3>
+    <audio src="meow_mix.mp3" controls>
+      Your stupid browser doesn't support HTML 5 audio.
+    </audio>
+
+    <!-- Utilizado para desenhar gráficos utilizando scripts (geralmente javascript) -->
+    <h3>Canvas</h3>
+    <canvas id="wittykitty" width="800" height="450">
+      <!-- Fall-back content here, just like with video and audio -->
+    </canvas>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Class e ID Selectors */
+/* ID */
+#top { 
+    background-color: #ccc;
+    padding: 20px;
+}
+
+/* Class */
+.intro {
+    color: red;
+    font-weight: bold;
+}
+
+/* Grouping e Nesting */
+/* Grouping */
+.example-principal {
+    color: red;
+}
+
+.example-other-class {
+    color: red;
+}
+
+.example-another-class {
+    color: red;
+}
+/* Agrupando e simplificando */
+.example-principal, .example-other-class, .example-another-class {
+    color: red;
+}
+
+/* Nesting */
+#top {
+    background-color: #ccc;
+    padding: 1em
+}
+
+#top h1 {
+    color: #ff0;
+}
+
+#top p {
+    color: red;
+    font-weight: bold;
+}
+
+/* Pseudo Classes */
+.example-pseudo-class:link {
+    color: blue;
+}
+
+.example-pseudo-class:visited {
+    color: orange;
+}
+
+/* Dynamic Pseudo Classe */
+.example-dynamic-pseudoclass:active {
+color: red;
+}
+
+.example-dynamic-pseudoclass:hover {
+    text-decoration: none;
+    color: blue;
+    background-color: yellow;
+}
+
+.example-dynamic-pseudoclass:focus {
+    background-color: green;
+}
+
+/* First children */
+.example-first-children p:first-child {
+    font-weight: bold;
+    font-size: 40px;
+} 
+
+/* Shorthand Properties */
+/* Margins e Padding */
+.example-shorthand-margin {
+    margin: 30px 5px 10px 20px; /* top right bottom left */
+}
+/* Border */
+.example-shorthand-border {
+    border: 1px red solid;
+}
+/* Font */
+.example-shorthand-font {
+    font: italic bold 12px/2 courier;
+}
+
+/* Background Images */
+/*
+- background: color image repeat position
+- repeat pode ser: repeat, repeat-y, repeat-x e no-repeat
+- position pode ser: top, center, bottom, left, right
+*/
+.example-background-image {
+    background: white url(https://t4.ftcdn.net/jpg/05/61/13/61/360_F_561136149_V7GT6r7BL2GSdK5ZzcRUXUlhgCxCYq2q.jpg) no-repeat top right;
+}
+
+/* Display */
+.example-display-inline li {
+    display: inline;
+}
+
+.example-display-block li {
+    display: block;
+    padding: 20px 10px;
+}
+
+/* Pseudo Elements */
+/* first-letter e first-line*/
+.example-pseudoelement-firstletter-firstline {
+    font-size: 12px;
+}
+
+.example-pseudoelement-firstletter-firstline::first-letter {
+    font-size: 24px;
+    float: left;
+}
+
+.example-pseudoelement-firstletter-firstline::first-line {
+    font-weight: bold;
+}
+
+/* before e after content */
+.blockquote::before {
+    content: open-quote;
+}
+
+.blockquote::after {
+    content: close-quote;
+}
+
+.ul li::before {
+    content: "POW!!";
+    background-color: red;
+    color: #fc0;
+}
+
+.ul::after {
+    content: url(images/jam.jpg);
+}
+
+/* Page Layout */
+/* Positioning - usando absolute */
+#navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+}
+
+#content {
+    margin-left: 200px;
+} 
+/* usando float */
+#navigation {
+    float: left;
+    width: 200px;
+}
+
+#navigation2 {
+    float: right;
+    width: 200px;
+}
+
+#content {
+    margin: 0 200px;
+}
+
+#footer {
+    clear: both;
+}

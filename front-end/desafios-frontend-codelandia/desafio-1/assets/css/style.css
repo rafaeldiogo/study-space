@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+/* Pre definindo a paleta de cores e a tipografia (estilo no tailwind) */
+:root {
+  --black-light: #17171a;
+  --black: #121214;
+  --black-border: #252529;
+  --white: #fff;
+  --gray: #afabb6;
+  --orange: #e07b67;
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+A caixa de scroll rola de forma suave usando uma função de temporização definida pelo usuário em um período de tempo. 
+Os agentes do usuário devem seguir as convenções da plataforma, se houver.
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--black);
+  font-size: 1.6rem; /* 25.6px (1rem = 16px) */
+  font-family: "Space Grotesk", sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+h2 {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  background: var(--black-light);
+  height: 25rem; /* 400px (1rem = 16px) */
+}
+
+.header-container {
+  max-width: 120rem; /* 1920px */
+}
+
+.header-container-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4.5rem; /* 72px */
+}
+
+.header-container-title span {
+  color: var(--orange);
+}
+
+.header-container-title h1 {
+  margin-top: 6.4rem; /* 102.4px */
+  color: var(--white);
+}
+
+.header-container-search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 6rem !important; /* não é uma boa prática usar important */
+}
+
+.header-container-search input {
+  width: 100%;
+  height: 6.5rem; /* 104px */
+  padding-left: 7.4rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--black-border);
+  background: var(--black-light);
+  color: var(--white);
+  font-size: 1.7rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.header-container-search input:focus {
+  outline: none !important; /* Não é uma boa prática usar important */
+  border: 0.1rem solid var(--white);
+}
+
+.header-container-search input::placeholder {
+  color: var(--gray);
+}
+
+.search-icon {
+  width: 5.4rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  cursor: pointer;
+  color: var(--orange);
+}
+
+/* Main */
+.main-container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.main-container .article {
+  margin-bottom: 5rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--orange);
+  background: var(--black-light);
+}
+
+.article .article-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 2.5rem 0 2.5rem;
+}
+
+.article .article-header p {
+  font-size: 1.6rem;
+  color: var(--orange);
+}
+
+.heart-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: var(--orange);
+  cursor: pointer;
+}
+
+/* Verificar isso depois */
+.heart-icon.active {
+  fill: var(--orange);
+}
+
+.article-content {
+  padding: 0 2.5rem 2.5rem 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.article-content p {
+  margin-top: 1rem;
+  color: var(--gray);
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+}
+
+/* Media Queries */
+@media (min-width: 320px) {
+  header {
+    height: auto;
+  }
+
+  .header-container {
+    width: 100%;
+  }
+
+  .header-container-search {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+  }
+
+  .main-container {
+    margin-top: 7rem;
+    width: 90%;
+  }
+}
+
+@media (min-width:414px) {
+  .header-container {
+    width: 90%;
+  }
+
+  .header-container-search {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .article-content p {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+  }
+
+  .heart-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

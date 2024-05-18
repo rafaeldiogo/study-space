@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  color: blue;
+}
+
+body {
+  font-size: 14px;
+  color: navy;
+}
+
+/* Tamanho e porcentagem */
+.tamanho-px {
+  font-size: 20px;
+}
+
+.tamanho-em {
+  font-size: 2em;
+}
+
+.tamanho-pt {
+  font-size: 30pt;
+}
+
+.tamanho-porcentagem {
+  width: 70%;
+}
+
+/* Colors - Cores */
+.cor-predefinida {
+  color: aqua;
+}
+
+.cor-hexadecimal {
+  color: #250013;
+}
+
+.cor-rgb {
+  color: rgb(25, 50, 80);
+}
+
+.color-background {
+  color: #ffc;
+  background-color: #009;
+}
+
+/* Text - Texto */
+.text-font-family {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.text-font-size {
+  font-size: 30px;
+}
+
+.text-font-weight {
+    font-weight: bold;
+}
+
+.text-font-style {
+    font-style: italic;
+}
+
+.text-text-decoration {
+    text-decoration: underline;
+}
+
+.text-text-transform {
+    text-transform: uppercase;
+}
+
+.text-text-spacing {
+    letter-spacing: 0.5em;
+    word-spacing: 2em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Margins and Padding */
+.example-margin-padding {
+    font-size: 1.5em;
+    background-color: #ccc;
+    margin: 20px;
+    padding: 40px;
+}
+
+/* Borders */
+.example-border {
+    border-style: dashed;
+    border-width: 3px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-color: red; 
+}

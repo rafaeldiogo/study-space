@@ -16,11 +16,6 @@
       "price": 29.9
     },
     {
-      "id": "4944",
-      "name": "teste",
-      "price": "12"
-    },
-    {
       "id": "d340",
       "name": "capa de chuva",
       "price": "59.59"
@@ -61,8 +56,8 @@
       "price": "60"
     },
     {
-      "id": "fe20",
-      "name": "suporte microfone 3",
+      "id": "ff03",
+      "name": "suporte microfone 3 ",
       "price": "75"
     }
   ]
